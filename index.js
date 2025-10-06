@@ -123,5 +123,85 @@ function mend(tsag) {
 // mend(11)
 
 function zovloh(temp, baidal) {
-    
+    if (baidal == "rainy") {
+        console.log("Shuheree martavaa bro")
+    }
+    else if (baidal =="sunny") {
+        if (temp >= 30) {
+            console.log("Shatlaa")
+        }
+
+        else if (temp >= 20) {
+            console.log("Saihan bainaa")
+        }
+
+       else if (temp< 20) {
+        console.log("huiten bn ahdaa neg hiichih")
+       }
+    }
 }
+
+// zovloh(100, "sunny")
+
+function nasnii_namar(nas,gender) {
+    let dutuu_nas;
+    if (gender== "er"){
+    if (nas>=18) {
+        console.log("mashin bariul baridoo odoo");
+    }
+    else {
+       dutuu_nas= 18-nas;
+       console.log("mashin ", dutuu_nas, " jiliin daraa bariul baridaa odoo")
+    }
+}
+else if (gender == "em"){
+    console.log("Za demiidee bro")
+}
+}
+
+// nasnii_namar(15, "er");
+
+function gurvaljin(a,b,c) {
+    if (a == b) {
+        if (b==c) {
+            console.log("Zuvuu zuv")
+        }
+        else {
+             console.log("Buruu!!!")
+        }
+    }
+    else {
+        console.log("Buruu!!!!")
+    }
+}
+
+// gurvaljin (4,4,3)
+
+function let_me_check(useg) {
+    if (useg == "e") {
+        console.log("vowel")
+    }
+    else if (useg == "u"){
+         console.log("vowel")
+    }
+       else if (useg == "i"){
+         console.log("vowel")
+    }
+       else if (useg == "o"){
+         console.log("vowel")
+    }
+       else if (useg == "a"){
+         console.log("vowel")
+    }
+      else if (useg == "y"){
+         console.log("semi-vowel")
+    }
+      else if (useg == "w"){
+         console.log("semi-vowel")
+    }
+    else {
+        console.log("consonant")
+    }
+}
+
+let_me_check("y")
