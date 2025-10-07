@@ -73,7 +73,7 @@ function olimp(year) {
 // olimp(1905)
 
 function chi_muu_suragch_uu(dun) {
-if (dun>=90) {
+if (dun>=90 && dun>=100) {
     console.log("A")
 }
 else if (dun>=70){
