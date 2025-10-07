@@ -2,30 +2,37 @@
 
 function judge(a, b, c) {
  if (a == b) {
-    console.log(b), console.log("b = a")
+    // console.log(b), console.log("b = a")
+    return b
 } else if (b == c) {
-    console.log(b)
-    console.log("b = c")
+    // console.log(b)
+    // console.log("b = c")
+    return b
 } else if (c == a) {
-    console.log(c)
-    console.log("c = a")
+    // console.log(c)
+    // console.log("c = a")
+    return c
 }
 else if (a>b){
     if (a>c){
-        console.log(a)
+        // console.log(a)
+        return a
     }
     else {
-        console.log(c)
+        // console.log(c)
+        return c
     }
 }
 else if (b>c){
-    console.log(b)
+    // console.log(b)
+    return b
 } else {
-    console.log(c)
+    // console.log(c)
+    return c
 }
 }
 
-// judge(5.5, 5, 6);
+// console.log(judge(5.5, 5, 6));
 
 function tav(a) {
     if (a%5 === 0) {
@@ -162,6 +169,7 @@ else if (gender == "em"){
 // nasnii_namar(15, "er");
 
 function gurvaljin(a,b,c) {
+
     if (a == b) {
         if (b==c) {
             console.log("Zuvuu zuv")
@@ -204,4 +212,33 @@ function let_me_check(useg) {
     }
 }
 
-let_me_check("y")
+// let_me_check("y")
+
+function gurvaljin_tal(a,b,c) {
+   if(judge(a,b,c)== a) {
+    if (a<(b+c)) {
+        console.log("boljin")
+    }
+    else {
+        console.log("bolohgui bnda")
+    }
+   } 
+    else if(judge(a,b,c)== b) {
+    if (b<(a+c)) {
+        console.log("boljin")
+    }
+    else {
+        console.log("bolohgui bnda")
+    }
+   } 
+    else if(judge(a,b,c)== c) {
+    if (c<(b+a)) {
+        console.log("boljin")
+    }
+    else {
+        console.log("bolohgui bnda")
+    }
+   } 
+}
+
+gurvaljin_tal(4,4,4)
