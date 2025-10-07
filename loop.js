@@ -127,14 +127,83 @@ console.log(uul_too)
 function hos(array) {
     let hos=[]
     for (i=0; i<array.length; i++){
-        for (a=0; a<array.length; a++){
+            for (a=i; a<array.length; a++){
             if (array[i] == array[a] && i!=a){
                 hos.push(array[i])
+                array.splice(i,1);
+                array.splice(a,1);
             }
-        }
     }
+}
     console.log(hos)
 }
 
-let array = [3,2,1,4,3,6,6,66,66];
-hos(array)
+// let array = [3,2,1,4,3,6,6,66,66,66,6,66,6];
+// hos(array)
+
+function niilber_hos(array,num) {
+    let niil =[];
+ for (i=0; i<array.length; i++){
+            for (a=i; a<array.length; a++){
+            if (array[i]+array[a] == num && i!=a){
+                niil.push(array[i])
+                niil.push(array[a])
+            }
+    }
+}
+console.log(niil)
+}
+
+//  let array = [3,2,1,2,4,3,0];
+//  niilber_hos(array,4)
+
+
+function ogtol(array1,array2) {
+    let ogt =[];
+    let index1 =[];
+    let index2 =[];
+ for (i=0; i<array1.length; i++){
+            for (a=i; a<array2.length; a++){
+            if (array1[i]==array2[a]){
+                ogt.push(array1[i])
+                index1.push(i)
+                      }
+    }
+}
+console.log(ogt)
+console.log(`array1 index ${index1}`)
+}
+
+//  let array1 = [3,2,1,2,4,3,0,7];
+//  let array2 = [0,0,1,0,0,3,5,7];
+//  ogtol(array1,array2)
+
+function racist(array1) {
+    let nemeh =[];
+    let hasah =[];
+    let niit=[];
+ for (i=0; i<array1.length; i++){
+            
+            if (array1[i]<0){
+                hasah.push(array1[i])
+                      }
+                      else if (array1[i]>=0){
+                nemeh.push(array1[i])
+                      }
+}
+console.log(niit = hasah.concat(nemeh))
+}
+
+//  let array1 = [-3,2,-1,-2,4,-3,0,-7];
+//  racist(array1)
+
+function neg_dutuu(arr) {
+    for (i=0; i<arr.length; i++){
+        if (arr[i]+1 != arr[i+1] && arr.length>i+1){
+console.log(arr[i]+1)
+        }
+    }
+}
+
+// let arr=[1,2,3,4,5,6,8,9,10,12]
+// neg_dutuu(arr)
