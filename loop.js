@@ -222,3 +222,139 @@ for (let i = 0; i < 100; i++) {
   zero.push(0);
 }
 // check_gerel(zero);
+
+function davtalt(arr, num) {
+  let zero = 0;
+
+  for (i = 0; i < arr.length; i++) {
+    if (arr[i] == num) {
+      zero++;
+    }
+  }
+  console.log(zero);
+}
+
+// let arr = [1, 2, 3, 5, 4, 5, 5, 5, 5, 4, 1];
+// davtalt(arr, 1);
+
+function murdugch(arr, hulgaich) {
+  let sherlok = 0;
+  let unen = false;
+  for (i = 0; i < arr.length; i++) {
+    if (arr[i] == hulgaich) {
+      sherlok++;
+      unen = true;
+    }
+  }
+  console.log(`hulgaich ene dotor ${sherlok} baina`);
+  if (unen == true) {
+    console.log(`Unen`);
+  } else {
+    console.log(`Hudal`);
+  }
+}
+
+// murdugch(arr, 1);
+
+function find_loser(arr) {
+  let max1;
+  max1 = max_utga(arr);
+  for (i = 0; i < arr.length; i++) {
+    if (arr[i] == max1) {
+      arr[i] = -999;
+    }
+  }
+  console.log(`loser is ${max_utga(arr)}`);
+}
+
+// find_loser(arr);
+
+function kei(arr, k) {
+  let new_arr = [];
+
+  for (let a = 0; a < arr.length; a++) {
+    new_arr.push(arr[a]);
+  }
+  for (i = 0; i < k; i++) {
+    for (j = 0; j < arr.length; j++) {
+      if (j == 0) {
+        new_arr[j] = arr[arr.length - 1];
+      } else {
+        new_arr[j] = arr[j - 1];
+      }
+    }
+    for (h = 0; h < arr.length; h++) {
+      arr[h] = new_arr[h];
+    }
+  }
+  return new_arr;
+}
+
+// kei(arr, 6);
+function eliminate(arr) {
+  for (a = 0; a < arr.length; a++) {
+    for (s = 0; s < arr.length; s++) {
+      if (arr[a] == arr[s] && s != a) {
+        arr.splice(s, 1);
+      }
+    }
+  }
+  console.log(arr);
+}
+// let arr = [1, 2, 3, 5, 4, 5, 5, 5, 5, 4, 1];
+// eliminate(arr);
+
+function bactral(arr) {
+  let sum = 0;
+  let bact = 1;
+  for (i = 0; i < arr.length; i++) {
+    for (b = 1; b <= arr[i]; b++) {
+      bact = bact * b;
+    }
+    sum = sum + bact;
+    bact = 1;
+  }
+  console.log(sum);
+}
+// let arr = [1, 2, 3, 4];
+// bactral(arr);
+
+function rotation_check(arr1, arr2) {
+  for (i = 0; i < arr1.length; i++) {
+    const rotatedArr = kei(arr1, i);
+
+    let isSame = true;
+
+    for (j = 0; j < arr1.length; j++) {
+      if (rotatedArr[j] !== arr2[j]) {
+        isSame = false;
+      }
+    }
+
+    if (isSame) {
+      return true;
+    }
+  }
+
+  return false;
+}
+
+// let arr1 = [1, 2, 3, 4];
+// let arr2 = [4, 1, 2, 3];
+// const result = rotation_check(arr1, arr2);
+// console.log(result);
+
+function sort(arr1, arr2) {
+  let arr = [];
+  let index = [];
+  for (i = 0; i < arr1.length; i++) {
+    if (arr1[i] > arr2[0]) {
+      index.push(i);
+    }
+  }
+  console.log(index);
+}
+
+let arr1 = [1, 2, 3, 4];
+let arr2 = [2, 3, 4, 5, 6];
+sort(arr1, arr2);
