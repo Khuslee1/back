@@ -120,7 +120,7 @@ function uul(array) {
 // uul(array);
 
 function hos(array) {
-  //     let hos=[]
+  // let hos=[]
   //     for (i=0; i<array.length; i++){
   //             for (a=i; a<array.length; a++){
   //             if (array[i] == array[a]&& i!=a){
@@ -130,14 +130,14 @@ function hos(array) {
   // }
   //     console.log(hos)
   for (i = 0; i < array.length; i++) {
-    if (i % 2 == 1) {
-      console.log(`${array[i - 1]}, ${array[i]}`);
+    for (a = i; a < array.length; a++) {
+      console.log(array[i], array[a]);
     }
   }
 }
 
-// let array = [3,4,4,3,5,5,6,6,6,6];
-// hos(array)
+// let array = [3, 4, 2, 3];
+// hos(array);
 
 function niilber_hos(array, num) {
   let niil = [];
@@ -221,4 +221,4 @@ let zero = [];
 for (let i = 0; i < 100; i++) {
   zero.push(0);
 }
-check_gerel(zero);
+// check_gerel(zero);
