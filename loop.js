@@ -345,16 +345,102 @@ function rotation_check(arr1, arr2) {
 // console.log(result);
 
 function sort(arr1, arr2) {
-  let arr = [];
-  let index = [];
-  for (i = 0; i < arr1.length; i++) {
-    if (arr1[i] > arr2[0]) {
-      index.push(i);
+  let arr1fake = arr1;
+  let arr2fake = arr2;
+  let sorted = [];
+  let niil = arr1.length + arr2.length;
+  for (i = 1; i <= niil; i++) {
+    if (arr1fake[0] <= arr2fake[0]) {
+      sorted.push(arr1fake[0]);
+      arr1fake.splice(0, 1);
+    } else if (arr1fake[0] > arr2fake[0]) {
+      sorted.push(arr2fake[0]);
+      arr2fake.splice(0, 1);
+    } else if (arr1fake[0] == undefined) {
+      sorted.push(arr2fake[0]);
+      arr2fake.splice(0, 1);
+    } else if (arr2fake[0] == undefined) {
+      sorted.push(arr1fake[0]);
+      arr1fake.splice(0, 1);
     }
   }
-  console.log(index);
+  console.log(sorted);
 }
 
-let arr1 = [1, 2, 3, 4];
-let arr2 = [2, 3, 4, 5, 6];
-sort(arr1, arr2);
+// let arr1 = [7, 8, 15, 17];
+// let arr2 = [1, 6, 10, 12, 18];
+// sort(arr1, arr2);
+
+function matrx(mat) {
+  let sum1 = 0;
+  let sum2 = 0;
+  let sum = 0;
+  for (i = 0; i < mat.length; i++) {
+    sum1 = sum1 + mat[i][i];
+    sum2 = sum2 + mat[mat.length - 1 - i][i];
+  }
+  if (mat.length % 2 != 0) {
+    sum = sum1 + sum2 - mat[(mat.length - 1) / 2][(mat.length - 1) / 2];
+  } else {
+    sum = sum1 + sum2;
+  }
+  console.log(`primary: ${sum1}`);
+  console.log(`secondary: ${sum2}`);
+  console.log(`total: ${sum}`);
+}
+
+mat = [
+  [4, 2, 10, 1, 2],
+  [2, 3, 4, 1, 3],
+  [3, 4, 5, 1, 3],
+  [3, 4, 5, 1, 4],
+  [3, 4, 5, 1, 4],
+];
+
+// matrx(mat);
+
+function factor(n) {
+  if (n === 0 || n === 1) {
+    return 1;
+  } else {
+    let result = 1;
+    for (let i = 2; i <= n; i++) {
+      result = result * i;
+    }
+    return result;
+  }
+}
+
+function shat(sum) {
+  let posi = 0;
+  for (let a = 0; a <= sum; a++) {
+    for (let b = 0; b <= sum; b++) {
+      if (2 * a + 1 * b == sum) {
+        posi = posi + factor(a + b) / (factor(a) * factor(b));
+      }
+    }
+  }
+  console.log(posi);
+}
+
+// function fun(n) {
+//   if (n === 1) return 1;
+//   if (n === 2) return 2;
+//   return fun(n - 1) + fun(n - 2)
+// }
+
+// shat(7);
+
+function sort(arr) {
+  for (let j = 0; j < arr.length; j++) {
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i] > arr[i + 1]) {
+        let temp = arr[i];
+        arr[i] = arr[i + 1];
+        arr[i + 1] = temp;
+      }
+    }
+  }
+  return arr;
+}
+console.log(sort([30, 2, 3, 1, 9, 10, 4, 5, 22, 25, 27]));
