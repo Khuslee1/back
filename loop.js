@@ -443,4 +443,130 @@ function sort(arr) {
   }
   return arr;
 }
-console.log(sort([30, 2, 3, 1, 9, 10, 4, 5, 22, 25, 27]));
+// console.log(sort([30, 2, 3, 1, 9, 10, 4, 5, 22, 25, 27]));
+
+function selection(arr) {
+  for (j = 0; j < arr.length; j++) {
+    let min = arr[j];
+    let indexs = j;
+    for (i = j + 1; i < arr.length; i++) {
+      if (min > arr[i]) {
+        min = arr[i];
+        indexs = i;
+      }
+    }
+    let temp = arr[indexs];
+    arr[indexs] = arr[j];
+    arr[j] = temp;
+  }
+  return arr;
+}
+// console.log(selection([30, 3, 2, 1, 9, 10, 11, 4, 5, 22, 25, 27]));
+
+function Insertion(arr) {
+  for (j = 0; j < arr.length; j++) {
+    for (i = j + 1; i > 0; i--) {
+      if (arr[i] < arr[i - 1]) {
+        let temp = arr[i];
+        arr[i] = arr[i - 1];
+        arr[i - 1] = temp;
+      }
+    }
+  }
+  return arr;
+}
+// console.log(Insertion([30, 3, 2, 1, 9, 10, 11, 4, 5, 22, 25, 27]));
+
+function gurav_tav() {
+  let i = 1;
+  while (i <= 100) {
+    if (i % 3 == 0 && i % 5 == 0) {
+      console.log(i);
+    }
+    i++;
+  }
+}
+
+// gurav_tav();
+
+function tsipr(num) {
+  let arr = [];
+  while (num > 0) {
+    arr.push(num % 10);
+    num = (num - (num % 10)) / 10;
+    console.log(arr);
+  }
+  let i = 0;
+  let sum = 0;
+  while (i < arr.length) {
+    sum = sum + arr[i];
+    i++;
+  }
+  console.log(sum);
+}
+
+// tsipr(1234501);
+
+function tim(time) {
+  switch (true) {
+    case time < 12 && time > 0:
+      console.log(`${time} am`);
+      break;
+    case time == 12:
+      console.log(`12 pm`);
+      break;
+    case time > 12 && time < 24:
+      console.log(`${time - 12} pm`);
+      break;
+    case time == 24:
+      console.log(`12 am`);
+      break;
+    default:
+      console.log(`wrong`);
+      break;
+  }
+}
+// tim(14);
+
+function day1(da) {
+  switch (da) {
+    case "monday":
+      console.log(`ajilaa hii`);
+      break;
+    case "tuesday":
+      console.log(`ajilaa hii`);
+      break;
+    case "wednesday":
+      console.log(`ajilaa hii`);
+      break;
+    case "thursday":
+      console.log(`ajilaa hii`);
+      break;
+    case "friday":
+      console.log(`ajilaa hii`);
+      break;
+    case "saturday":
+      console.log(`halit amardaa odoo`);
+      break;
+    case "sunday":
+      console.log(`halit amardaa odoo`);
+      break;
+  }
+}
+
+function day(da) {
+  switch (true) {
+    case da >= 1 && da <= 5:
+      console.log(`ajilaa hii`);
+      break;
+
+    case da == 6 || da == 7:
+      console.log(`halit amardaa odoo`);
+      break;
+    default:
+      console.log("invalid");
+      break;
+  }
+}
+
+day(8);
