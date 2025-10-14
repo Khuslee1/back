@@ -344,7 +344,7 @@ function rotation_check(arr1, arr2) {
 // const result = rotation_check(arr1, arr2);
 // console.log(result);
 
-function sort(arr1, arr2) {
+function sort1(arr1, arr2) {
   let arr1fake = arr1;
   let arr2fake = arr2;
   let sorted = [];
@@ -463,7 +463,8 @@ function selection(arr) {
 }
 // console.log(selection([30, 3, 2, 1, 9, 10, 11, 4, 5, 22, 25, 27]));
 
-function Insertion(arr) {
+function Insertion(arr1) {
+  let arr = arr1;
   for (j = 0; j < arr.length; j++) {
     for (i = j + 1; i > 0; i--) {
       if (arr[i] < arr[i - 1]) {
@@ -569,4 +570,30 @@ function day(da) {
   }
 }
 
-day(8);
+// day(8);
+
+// function mergesort(arr) {
+//   let sorted =[];
+//   for (let i=0; i<arr.length; i++){
+
+//   }
+// }
+
+function yesh(arr, sorted) {
+  let sortedid = [];
+  for (let i = arr.length - 1; i >= 0; i--) {
+    for (let j = 0; j < arr.length; j++) {
+      if (sorted[i] == arr[j]) {
+        sortedid.push(j + 1);
+      }
+    }
+  }
+
+  console.log(sortedid);
+}
+
+const arr = [55, 66, 78, 55, 34, 23, 87, 91];
+let sorted = arr.sort((a, b) => a - b);
+console.log(arr);
+console.log(sorted);
+yesh(arr, sorted);
