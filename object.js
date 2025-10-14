@@ -72,10 +72,20 @@ const vowel = (vo) => {
 // console.log(vowel("asduiouk"));
 
 const long = (str) => {
-  return str
+  return str.split(" ").filter((word) => word.length == str
     .split(" ")
     .map((a) => a.length)
-    .sort((a, b) => b - a)[0];
+    .sort((a, b) => b - a)[0]);
 };
 
-console.log(long("i love you"));
+// console.log(long("i love you dear"));
+ 
+const occ = (sda) => {
+  return sda.split("").reduce((acc, char) => {
+    acc[char] = (acc[char] || 0) + 1;
+    return acc; 
+  }, {});
+};
+
+// console.log(occ("lovel"));
+
