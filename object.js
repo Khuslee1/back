@@ -72,20 +72,57 @@ const vowel = (vo) => {
 // console.log(vowel("asduiouk"));
 
 const long = (str) => {
-  return str.split(" ").filter((word) => word.length == str
-    .split(" ")
-    .map((a) => a.length)
-    .sort((a, b) => b - a)[0]);
+  return str.split(" ").filter(
+    (word) =>
+      word.length ==
+      str
+        .split(" ")
+        .map((a) => a.length)
+        .sort((a, b) => b - a)[0]
+  );
 };
 
 // console.log(long("i love you dear"));
- 
+
 const occ = (sda) => {
   return sda.split("").reduce((acc, char) => {
     acc[char] = (acc[char] || 0) + 1;
-    return acc; 
+    return acc;
   }, {});
 };
 
+// console.log(Object.values(occ("lovel")).sort((a, b) => b - a)[0]);
+
 // console.log(occ("lovel"));
 
+const yesh = (arr) => {
+  let obj = arr.map((num, ind) => {
+    return { index: ind + 1, number: num };
+  });
+  let sorted = [...arr].sort((a, b) => b - a);
+  let arra = [];
+  console.log(sorted);
+  console.log(obj);
+  for (i in sorted) {
+    for (j in sorted) {
+      obj[i].number == sorted[j] ? arra.push(j - -1) : (arra = arra);
+    }
+  }
+  return arra;
+};
+
+console.log(yesh([95, 64, 23, 56, 24]));
+
+const ovog = (obj) => {
+  let O = obj.lastname.split("")[0].toUpperCase();
+  let O2 = obj.firstname.split("")[0].toUpperCase();
+  let O3 = obj.firstname
+    .split("")
+    .filter((el, num) => num !== 0)
+    .join("");
+  let fullname = O + ". " + O2 + O3.toLowerCase();
+  return fullname;
+};
+
+// const name = { firstname: "bataaaashi", lastname: "CHold" };
+// console.log(ovog(name));
