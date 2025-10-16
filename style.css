@@ -2,19 +2,91 @@
   margin: 0;
   box-sizing: border-box;
 }
-
-.cont {
+/* body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
   width: 100vw;
+  transform: rotate(180deg);
+}
+
+.cont {
+  position: relative;
   display: flex;
-  padding: 20px;
-  background-color: red;
-  flex-wrap: wrap;
-  gap: 20px;
+  height: 300px;
+  width: 500px;
+}
+
+.finger {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 25%;
+  border: solid black 2px;
+  transition: height 0.5s;
+  align-items: flex-end;
+  background-color: blanchedalmond;
+  border-radius: 20px;
+}
+
+.erhii {
+  display: flex;
+  height: 200px;
+  width: 120px;
+  border: solid black 2px;
+  background-color: blanchedalmond;
+  border-radius: 20px;
+  justify-content: end;
+  align-items: end;
+}
+
+.hums {
+  height: 100px;
+  width: 100px;
+  border-radius: 30px;
+  border: solid black 2px;
+  opacity: 0;
+  background-color: palevioletred;
+}
+
+.humsi {
+  background-color: palevioletred;
+  height: 100px;
+  width: 50px;
+  border-radius: 0px 0px 20px 20px;
+  border: solid black 2px;
+  opacity: 1;
+}
+
+.button {
+  border: solid black 2px;
+  height: 50px;
+  width: 100px;
+  background-color: white;
+  position: absolute;
+  bottom: 800px;
+} */
+/* body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+.cont {
+  height: 50px;
+  width: 100px;
+  display: flex;
+
+  border-radius: 10px;
+  border: solid black 2px;
 }
 
 .box {
-  background-color: blue;
-  height: 200px;
-  width: 200px;
-}
+  display: flex;
+  height: 100%;
+  width: 50px;
+  justify-content: center;
+  align-items: center;
+} */

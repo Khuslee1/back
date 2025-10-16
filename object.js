@@ -111,7 +111,7 @@ const yesh = (arr) => {
   return arra;
 };
 
-console.log(yesh([95, 64, 23, 56, 24]));
+// console.log(yesh([95, 64, 23, 56, 24]));
 
 const ovog = (obj) => {
   let O = obj.lastname.split("")[0].toUpperCase();
@@ -126,3 +126,15 @@ const ovog = (obj) => {
 
 // const name = { firstname: "bataaaashi", lastname: "CHold" };
 // console.log(ovog(name));
+
+const birth = new Date("2003-11-20");
+function birthday(birth) {
+  const today = new Date();
+  let diff = today.getTime() - birth.getTime();
+  let day = Math.floor(diff / (1000 * 60 * 60 * 24));
+  let month = Math.floor(day / 30);
+  let year = Math.floor(month / 12);
+  console.log(day, month, year);
+}
+
+birthday(birth);
