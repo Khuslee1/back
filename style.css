@@ -58,7 +58,8 @@
   border: solid black 2px;
   opacity: 1;
 }
-
+  */
+/* 
 .button {
   border: solid black 2px;
   height: 50px;
@@ -89,4 +90,48 @@
   width: 50px;
   justify-content: center;
   align-items: center;
+} */
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.button {
+  height: 50px;
+  width: 150px;
+  background-color: yellow;
+  border-radius: 10px;
+  border: solid rgb(105, 105, 2) 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* 
+.buttcont {
+  display: flex;
+  gap: 20px;
+}
+
+.button:hover {
+  background-color: brown;
+  color: white;
+  transition: 0.5s;
+}
+
+.pa {
+  height: 150px;
+  width: 300px;
+  border: dashed yellowgreen 3px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: yellow;
+  font-size: 20px;
 } */

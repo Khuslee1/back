@@ -1,13 +1,19 @@
-let finger = document.querySelectorAll(".finger");
-let container = document.querySelectorAll(".cont");
-let hums = document.querySelectorAll(".hums");
-let body = document.querySelectorAll("body");
-let erhii = document.querySelectorAll(".erhii");
-let button = document.querySelectorAll(".button");
+// // let finger = document.querySelectorAll(".finger");
+// let container = document.querySelectorAll(".container");
+// let para = document.querySelectorAll(".pa");
+// // let body = document.querySelectorAll("body");
+// // let erhii = document.querySelectorAll(".erhii");
+// let button = document.querySelectorAll(".button");
 
-container[0].addEventListener("click", () => {
-  container[0].style.backgroundColor = "white";
-});
+// function HTML() {
+//   para[0].innerHTML = "👺<b>Hypertext </b> &nbsp; Markup Language";
+// }
+// function JS() {
+//   para[0].innerHTML = "🫡<b>JavaScript</b>";
+// }
+// function CSS() {
+//   para[0].innerHTML = "🧔🏿‍♀️<b>Cascading </b>&nbsp;  Style Sheet";
+// }
 // for (let i = 0; i < finger.length; i++) {
 // let rand = Math.round(Math.random() * 10);
 // let num;
@@ -67,3 +73,44 @@ container[0].addEventListener("click", () => {
 //     button[1].style.backgroundColor = "white";
 //   }
 // });
+
+// function add() {
+//   let firstnum = document.getElementById("first");
+//   let secondnum = document.getElementById("second");
+//   let result = document.getElementsByClassName("result");
+//   const result1 = Number(firstnum.value) + Number(secondnum.value);
+//   result[0].innerHTML = result1;
+// }
+// function nas() {
+//   let firstnum = document.getElementById("first");
+//   let result = document.getElementsByClassName("result");
+//   if (Number(firstnum.value) < 18) {
+//     result[0].innerHTML = "Nas chin boloogu bnaa 🐣";
+//   } else {
+//     result[0].innerHTML = "er hurga 🐏";
+//   }
+// }
+// function check() {
+//   let first = document.getElementById("first");
+//   let result = document.getElementsByClassName("result");
+//   if (first.value == "") {
+//     result[0].innerHTML = "Mailee oruuclaaachee 🤬";
+//   } else {
+//     result[0].innerHTML = "Amjilttai 😇";
+//   }
+// }
+
+// let first = document.getElementById("first");
+// let result = document.getElementsByClassName("result");
+// first.addEventListener("input", () => {
+//   result[0].innerHTML = first.value.length;
+//   console.log(result[0]);
+// });
+let first = document.getElementById("first");
+let result = document.getElementsByClassName("result");
+let button = document.getElementsByClassName("button");
+hadgal = "";
+button[0].addEventListener("click", () => {
+  hadgal = hadgal + "-" + first.value + "</br>";
+  result[0].innerHTML = hadgal;
+});
