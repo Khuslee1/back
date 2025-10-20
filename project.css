@@ -7,9 +7,9 @@ body {
   justify-content: center;
 }
 .container {
-width: 377px;
- height: fit-content;
-  min-height: 290px;
+  width: 377px;
+  height: fit-content;
+
   position: absolute;
   top: 24px;
   border-radius: 10px;
@@ -50,30 +50,59 @@ h1 {
 .item {
   width: 345px;
   height: 62px;
-  background: #F9FAFB;
-padding: 16px;
-display: flex;
-justify-content: space-between;
-align-items: center;
-font-family: "inter",sans-serif;
-font-size: 14px;
-font-weight: 400;
-border-radius: 5px;
+  background: #f9fafb;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "inter", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  border-radius: 5px;
 }
 
 .delete {
   width: 67px;
   height: 30px;
-  background: #FEF2F2;
-color: #EF4444;
-font-family: "inter",sans-serif;
-font-size: 14px;
-border: none;
-border-radius: 5px;
+  background: #fef2f2;
+  color: #ef4444;
+  font-family: "inter", sans-serif;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
 }
 
 .list {
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+
+.cata {
+  width: 100%;
+  display: flex;
+  gap: 6px;
+}
+
+.catag {
+  height: 32px;
+  width: fit-content;
+  padding: 4px 12px;
+  background: #f3f4f6;
+  color: #363636;
+  font-size: 12px;
+}
+
+.check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.hiisenuu {
+  height: 20px;
+  width: 20px;
+  background: #ffffff;
+  border: 1px solid #767676;
 }

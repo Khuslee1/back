@@ -1,26 +1,50 @@
 const input = document.querySelector(".input");
 const add = document.querySelector(".add");
-const list =document.querySelector(".list");
+const list = document.querySelector(".list");
+const all = document.querySelector(".all");
+const active = document.querySelector(".active");
+const completed = document.querySelector(".completed");
+let content = [];
 
-let content="";
+const ListItem = (cont) => {
+  return `<div class="item"><div class="check"><input type="checkbox" class="hiisenuu">${cont}</div><button class="delete">Delete</button></div>`;
+};
+const render = () => {
+  list.innerHTML = content
+    .map((item) => {
+      return ListItem(item.text);
+    })
+    .join("");
+  checker();
+  addlist();
+};
 
-const ListItem =(content) => {
-    return `<div class="item"> ${content} <button class="delete"> Delete </button> </div>`;
+const addlist = () => {
+  const delet = document.querySelectorAll(".delete");
+  delet.forEach((btn, index) => {
+    btn.addEventListener("click", () => {
+      content = content.filter((el, i) => {
+        return i != index;
+      });
+      render();
+    });
+  });
+};
+
+const checker = () => {
+  const checkm = document.querySelectorAll(".hiisenuu");
+  checkm.forEach((ele, i) => {
+    ele.addEventListener("change", () => {
+      content[i].check = ele.checked;
+    });
+    ele.checked = content[i].check;
+  });
+  console.log(content);
 };
 
 add.addEventListener("click", () => {
-    const value =input.value;
-    content += ListItem(value);
-    list.innerHTML=content;
-
-
-    const delet = document.querySelectorAll(".delete");
-    const item= document.querySelectorAll(".item");
-    delet.forEach((btn) => {
-        btn.addEventListener("click", () => {
-
-        });
-    });
-
-
-} );
+  const value = { text: input.value, check: false };
+  content.push(value);
+  console.log(content);
+  render();
+});
