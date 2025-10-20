@@ -4,6 +4,7 @@ const list = document.querySelector(".list");
 const all = document.querySelector(".all");
 const active = document.querySelector(".active");
 const completed = document.querySelector(".completed");
+
 let content = [];
 
 const ListItem = (cont) => {
@@ -15,8 +16,41 @@ const render = () => {
       return ListItem(item.text);
     })
     .join("");
+  angilah();
   checker();
   addlist();
+};
+
+const angilah = () => {
+  all.addEventListener("click", () => {
+    list.innerHTML = content
+      .map((item) => {
+        return ListItem(item.text);
+      })
+      .join("");
+    checker();
+    addlist();
+  });
+  active.addEventListener("click", () => {
+    list.innerHTML = content
+      .filter((ele) => ele.check == false)
+      .map((item) => {
+        return ListItem(item.text);
+      })
+      .join("");
+    checker();
+    addlist();
+  });
+  completed.addEventListener("click", () => {
+    list.innerHTML = content
+      .filter((ele) => ele.check == true)
+      .map((item) => {
+        return ListItem(item.text);
+      })
+      .join("");
+    checker();
+    addlist();
+  });
 };
 
 const addlist = () => {
@@ -36,15 +70,14 @@ const checker = () => {
   checkm.forEach((ele, i) => {
     ele.addEventListener("change", () => {
       content[i].check = ele.checked;
+      render();
     });
     ele.checked = content[i].check;
   });
-  console.log(content);
 };
 
 add.addEventListener("click", () => {
   const value = { text: input.value, check: false };
   content.push(value);
-  console.log(content);
   render();
 });
