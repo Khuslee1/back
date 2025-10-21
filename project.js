@@ -17,8 +17,14 @@ const render = () => {
     })
     .join("");
   angilah();
-  checker();
-  addlist();
+  addlist(content);
+  checker(content);
+  all.style.backgroundColor = "#3C82F6";
+  all.style.color = "#ffffff";
+  active.style.backgroundColor = "#F3F4F6";
+  active.style.color = "#363636";
+  completed.style.backgroundColor = "#F3F4F6";
+  completed.style.color = "#363636";
 };
 
 const angilah = () => {
@@ -28,8 +34,14 @@ const angilah = () => {
         return ListItem(item.text);
       })
       .join("");
-    checker();
-    addlist();
+    checker(content);
+    addlist(content);
+    all.style.backgroundColor = "#3C82F6";
+    all.style.color = "#ffffff";
+    active.style.backgroundColor = "#F3F4F6";
+    active.style.color = "#363636";
+    completed.style.backgroundColor = "#F3F4F6";
+    completed.style.color = "#363636";
   });
   active.addEventListener("click", () => {
     list.innerHTML = content
@@ -38,8 +50,14 @@ const angilah = () => {
         return ListItem(item.text);
       })
       .join("");
-    checker();
-    addlist();
+    checker(content.filter((ele) => ele.check == false));
+    addlist(content.filter((ele) => ele.check == false));
+    active.style.backgroundColor = "#3C82F6";
+    active.style.color = "#ffffff";
+    all.style.backgroundColor = "#F3F4F6";
+    all.style.color = "#363636";
+    completed.style.backgroundColor = "#F3F4F6";
+    completed.style.color = "#363636";
   });
   completed.addEventListener("click", () => {
     list.innerHTML = content
@@ -48,36 +66,50 @@ const angilah = () => {
         return ListItem(item.text);
       })
       .join("");
-    checker();
-    addlist();
+    checker(content.filter((ele) => ele.check == true));
+    addlist(content.filter((ele) => ele.check == true));
+    completed.style.backgroundColor = "#3C82F6";
+    completed.style.color = "#ffffff";
+    active.style.backgroundColor = "#F3F4F6";
+    active.style.color = "#363636";
+    all.style.backgroundColor = "#F3F4F6";
+    all.style.color = "#363636";
   });
 };
 
-const addlist = () => {
+const addlist = (arr) => {
   const delet = document.querySelectorAll(".delete");
   delet.forEach((btn, index) => {
     btn.addEventListener("click", () => {
-      content = content.filter((el, i) => {
-        return i != index;
-      });
+      arr = arr.filter((el, i) => i == index);
+      console.log(arr);
+      content = content.filter((el) => el.uni != arr[0].uni);
+      console.log(content);
       render();
+      all.style.backgroundColor = "#3C82F6";
+      all.style.color = "#ffffff";
+      active.style.backgroundColor = "#F3F4F6";
+      active.style.color = "#363636";
+      completed.style.backgroundColor = "#F3F4F6";
+      completed.style.color = "#363636";
     });
   });
 };
 
-const checker = () => {
+const checker = (arr) => {
   const checkm = document.querySelectorAll(".hiisenuu");
   checkm.forEach((ele, i) => {
     ele.addEventListener("change", () => {
-      content[i].check = ele.checked;
+      arr[i].check = ele.checked;
       render();
     });
-    ele.checked = content[i].check;
+    ele.checked = arr[i].check;
   });
 };
 
 add.addEventListener("click", () => {
-  const value = { text: input.value, check: false };
+  const value = { text: input.value, check: false, uni: content.length };
   content.push(value);
+  console.log(content);
   render();
 });

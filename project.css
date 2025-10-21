@@ -106,3 +106,20 @@ h1 {
   background: #ffffff;
   border: 1px solid #767676;
 }
+
+.check:has(.hiisenuu:checked) {
+  text-decoration: line-through;
+}
+
+.footer {
+  font-size: 12px;
+  font-family: "inter", sans-serif;
+  display: flex;
+  gap: 4px;
+}
+
+.footer p {
+  font-size: 12px;
+  font-family: "inter", sans-serif;
+  color: #3b73ed;
+}
