@@ -9,7 +9,6 @@ body {
 .container {
   width: 377px;
   height: fit-content;
-
   position: absolute;
   top: 24px;
   border-radius: 10px;
@@ -18,7 +17,7 @@ body {
   align-items: center;
   padding: 24px 16px;
   flex-direction: column;
-  gap: 20px;
+  gap: 16px;
 }
 
 h1 {
@@ -49,7 +48,7 @@ h1 {
 
 .item {
   width: 345px;
-  height: 62px;
+  height: fit-content;
   background: #f9fafb;
   padding: 16px;
   display: flex;
@@ -76,6 +75,7 @@ h1 {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  border-bottom: solid #e4e4e7 1px;
 }
 
 .cata {
@@ -122,4 +122,33 @@ h1 {
   font-size: 12px;
   font-family: "inter", sans-serif;
   color: #3b73ed;
+}
+
+.task_counter button {
+  background-color: white;
+  border: none;
+  font-family: "inter", sans-serif;
+  color: #ef4444;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.task_counter {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  padding: 0px 5px;
+  text-align: center;
+  justify-content: center;
+  font-family: "inter", sans-serif;
+  font-size: 14px;
+  gap: 60px;
+  color: #6b7280;
+  font-weight: 350;
+}
+
+.task {
+  font-family: "inter", sans-serif;
+  font-size: 14px;
+  color: #6b7280;
 }
