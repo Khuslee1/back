@@ -1,0 +1,48 @@
+.cont {
+  height: 500px;
+  width: 1000px;
+  overflow-x: scroll;
+}
+
+.box {
+  width: 200px !important;
+  height: 300px;
+  background-color: aqua;
+  object-fit: cover;
+
+  flex-shrink: 0;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.box_cont {
+  display: flex;
+  gap: 30px;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  align-items: center;
+}
+
+@keyframes zuun {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(-100px);
+  }
+}
+
+@keyframes baruun {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(100px);
+  }
+}

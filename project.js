@@ -7,9 +7,16 @@ const completed = document.querySelector(".completed");
 const task = document.querySelector(".task");
 const taskCont = document.querySelector(".task_counter");
 let content = [];
+let allb = true;
+let activeb = false;
+let completedb = false;
 
 const ListItem = (cont) => {
-  return `<div class="item"><div class="check"><input type="checkbox" class="hiisenuu">${cont}</div><button class="delete">Delete</button></div>`;
+  return `<div class="item"><div class="check"><input type="checkbox" ${
+    cont.check ? "checked" : ""
+  } class="hiisenuu"/>${
+    cont.text
+  }</div><button class="delete">Delete</button></div>`;
 };
 
 const numTask = (num) => {
@@ -21,11 +28,27 @@ const change = () => {
   return `No tasks yet. Add one above!`;
 };
 const render = () => {
-  list.innerHTML = content
-    .map((item) => {
-      return ListItem(item.text);
-    })
-    .join("");
+  if (allb) {
+    list.innerHTML = content
+      .map((item) => {
+        return ListItem(item);
+      })
+      .join("");
+  } else if (activeb) {
+    list.innerHTML = content
+      .filter((ele) => ele.check == false)
+      .map((item) => {
+        return ListItem(item);
+      })
+      .join("");
+  } else if (completedb) {
+    list.innerHTML = content
+      .filter((ele) => ele.check)
+      .map((item) => {
+        return ListItem(item);
+      })
+      .join("");
+  }
 
   if (content.length == 0) {
     taskCont.innerHTML = change();
@@ -40,22 +63,19 @@ const render = () => {
     taskCont.innerHTML = numTask(count);
   }
 
+  console.log(content);
+
   angilah();
   addlist(content);
   checker(content);
-  all.style.backgroundColor = "#3C82F6";
-  all.style.color = "#ffffff";
-  active.style.backgroundColor = "#F3F4F6";
-  active.style.color = "#363636";
-  completed.style.backgroundColor = "#F3F4F6";
-  completed.style.color = "#363636";
+  addlistcl();
 };
 
 const angilah = () => {
   all.addEventListener("click", () => {
     list.innerHTML = content
       .map((item) => {
-        return ListItem(item.text);
+        return ListItem(item);
       })
       .join("");
     checker(content);
@@ -66,12 +86,15 @@ const angilah = () => {
     active.style.color = "#363636";
     completed.style.backgroundColor = "#F3F4F6";
     completed.style.color = "#363636";
+    allb = true;
+    activeb = false;
+    completedb = false;
   });
   active.addEventListener("click", () => {
     list.innerHTML = content
       .filter((ele) => ele.check == false)
       .map((item) => {
-        return ListItem(item.text);
+        return ListItem(item);
       })
       .join("");
     checker(content.filter((ele) => ele.check == false));
@@ -82,12 +105,15 @@ const angilah = () => {
     all.style.color = "#363636";
     completed.style.backgroundColor = "#F3F4F6";
     completed.style.color = "#363636";
+    allb = false;
+    activeb = true;
+    completedb = false;
   });
   completed.addEventListener("click", () => {
     list.innerHTML = content
       .filter((ele) => ele.check == true)
       .map((item) => {
-        return ListItem(item.text);
+        return ListItem(item);
       })
       .join("");
     checker(content.filter((ele) => ele.check == true));
@@ -98,6 +124,9 @@ const angilah = () => {
     active.style.color = "#363636";
     all.style.backgroundColor = "#F3F4F6";
     all.style.color = "#363636";
+    allb = false;
+    activeb = false;
+    completedb = true;
   });
 };
 
@@ -109,21 +138,18 @@ const addlist = (arr) => {
         arr = arr.filter((el, i) => i == index);
         content = content.filter((el) => el.uni != arr[0].uni);
         render();
-        all.style.backgroundColor = "#3C82F6";
-        all.style.color = "#ffffff";
-        active.style.backgroundColor = "#F3F4F6";
-        active.style.color = "#363636";
-        completed.style.backgroundColor = "#F3F4F6";
-        completed.style.color = "#363636";
       } else {
         arr = arr;
       }
     });
   });
-
+};
+const addlistcl = () => {
   const clearComp = document.querySelector(".task_counter button");
   clearComp.addEventListener("click", () => {
+    console.log("hi");
     if (confirm("Are youu sure?")) {
+      // alert("Are you sure?");
       content = content.filter((el) => el.check == false);
       render();
     } else {
@@ -131,15 +157,13 @@ const addlist = (arr) => {
     }
   });
 };
-
 const checker = (arr) => {
   const checkm = document.querySelectorAll(".hiisenuu");
   checkm.forEach((ele, i) => {
-    ele.addEventListener("change", () => {
-      arr[i].check = ele.checked;
+    ele.addEventListener("click", () => {
+      arr[i].check = !arr[i].check;
       render();
     });
-    ele.checked = arr[i].check;
   });
 };
 
