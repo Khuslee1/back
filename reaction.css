@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  width: 500px;
+  color: white;
+  font-family: "inter", sans-serif;
+  font-weight: 600;
+  font-size: 30px;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cont {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.press {
+  height: 100%;
+  width: 100%;
+  color: white;
+  font-family: "inter", sans-serif;
+  font-weight: 600;
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: greenyellow;
+  background-image: url("ninja.png");
+  background-size: 100% 100%;
+}
