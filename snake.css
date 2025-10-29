@@ -1,0 +1,49 @@
+.cont {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.box {
+  height: 600px;
+  width: 600px;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+.conti {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  height: 499px;
+  width: 499px;
+  border: solid black 1px;
+}
+/* .alim {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  z-index: -1;
+  background-color: red;
+  top: 50px;
+  left: 50px;
+}
+
+.snake {
+  height: 50px;
+  width: 50px;
+  background-color: green;
+} */
+
+.coor {
+  width: 50px;
+  height: 50px;
+}
+.container {
+  display: flex;
+  gap: 10px;
+}

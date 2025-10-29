@@ -21,6 +21,7 @@ let render = (rand) => {
 };
 
 start.addEventListener("click", () => {
+  start.disabled = true;
   int = setInterval(() => {
     let rand;
     let num = Math.random() * 10;
@@ -36,6 +37,7 @@ start.addEventListener("click", () => {
 
 res.addEventListener("click", () => {
   clearInterval(int);
+  start.disabled = false;
   move.forEach((ele) => {
     ele.style.transform = "";
   });
@@ -43,9 +45,11 @@ res.addEventListener("click", () => {
 
 zuram.forEach((ele) => {
   ele.addEventListener("click", () => {
-    score++;
-    console.log(score);
-    ele.style.backgroundImage = `url("./black.png")`;
-    count.innerHTML = `${score}`;
+    if (ele.style.backgroundImage == `url("./angryb.png")`) {
+      score++;
+      console.log(score);
+      ele.style.backgroundImage = `url("./black.png")`;
+      count.innerHTML = `${score}`;
+    }
   });
 });
