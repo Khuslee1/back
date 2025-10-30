@@ -9,20 +9,21 @@
 }
 
 .box {
-  height: 600px;
-  width: 600px;
+  height: 500px;
+  width: 500px;
   position: relative;
   display: flex;
   flex-wrap: wrap;
+  border: solid black 2px;
 }
-.conti {
+/* .conti {
   position: absolute;
   top: 50px;
   left: 50px;
   height: 499px;
   width: 499px;
   border: solid black 1px;
-}
+} */
 /* .alim {
   position: absolute;
   height: 50px;
