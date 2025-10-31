@@ -6,6 +6,7 @@
   align-items: center;
   flex-direction: column;
   gap: 10px;
+  background-image: url("./babyoil.png");
 }
 
 .box {
@@ -15,36 +16,27 @@
   display: flex;
   flex-wrap: wrap;
   border: solid black 2px;
+  background-color: pink;
 }
-/* .conti {
-  position: absolute;
-  top: 50px;
-  left: 50px;
-  height: 499px;
-  width: 499px;
-  border: solid black 1px;
-} */
-/* .alim {
-  position: absolute;
-  height: 50px;
-  width: 50px;
-  z-index: -1;
-  background-color: red;
-  top: 50px;
-  left: 50px;
-}
-
-.snake {
-  height: 50px;
-  width: 50px;
-  background-color: green;
-} */
-
 .coor {
-  width: 50px;
-  height: 50px;
+  width: 48px;
+  height: 48px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: solid black 1px;
 }
 .container {
   display: flex;
   gap: 10px;
+}
+
+h1 {
+  font-family: "inter", sans-serif;
+  font-size: 50px;
+  color: pink;
+}
+
+.header {
+  font-size: 70px;
 }
