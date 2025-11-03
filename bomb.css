@@ -7,8 +7,8 @@ body {
 }
 
 .box {
-  height: 500px;
-  width: 500px;
+  height: 850px;
+  width: 850px;
   display: flex;
   flex-wrap: wrap;
   border: solid black 1px;
