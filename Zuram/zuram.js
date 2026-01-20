@@ -38,6 +38,8 @@ start.addEventListener("click", () => {
 res.addEventListener("click", () => {
   clearInterval(int);
   start.disabled = false;
+  count.innerHTML = `0`;
+  score = 0;
   move.forEach((ele) => {
     ele.style.transform = "";
   });

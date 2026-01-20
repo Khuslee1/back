@@ -15,7 +15,7 @@
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  border: solid black 2px;
+  border: solid rgb(253, 131, 151) 2px;
   background-color: pink;
 }
 .coor {
@@ -24,7 +24,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  border: solid black 1px;
+  border: solid rgb(253, 131, 151) 1px;
 }
 .container {
   display: flex;
