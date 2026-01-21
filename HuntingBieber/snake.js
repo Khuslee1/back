@@ -121,6 +121,31 @@ const alim = () => {
   }
   coor[rand].style.backgroundImage = `url("./baby.png")`;
 };
+up.addEventListener("touchstart", () => {
+  if (dir !== "d") dir = "u";
+});
+down.addEventListener("touchstart", () => {
+  if (dir !== "u") dir = "d";
+});
+left.addEventListener("touchstart", () => {
+  if (dir !== "r") dir = "l";
+});
+right.addEventListener("touchstart", () => {
+  if (dir !== "l") dir = "r";
+});
+
+up.addEventListener("mousedown", () => {
+  if (dir !== "d") dir = "u";
+});
+down.addEventListener("mousedown", () => {
+  if (dir !== "u") dir = "d";
+});
+left.addEventListener("mousedown", () => {
+  if (dir !== "r") dir = "l";
+});
+right.addEventListener("mousedown", () => {
+  if (dir !== "l") dir = "r";
+});
 
 click();
 int = setInterval(() => {

@@ -10,8 +10,8 @@
 }
 
 .box {
-  height: 500px;
-  width: 500px;
+  height: 50%;
+  aspect-ratio: 1/1;
   position: relative;
   display: flex;
   flex-wrap: wrap;
@@ -19,16 +19,12 @@
   background-color: pink;
 }
 .coor {
-  width: 48px;
-  height: 48px;
+  width: 10%;
+  height: 10%;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  border: solid rgb(253, 131, 151) 1px;
-}
-.container {
-  display: flex;
-  gap: 10px;
+  /* border: solid rgb(253, 131, 151) 0.3%; */
 }
 
 h1 {
@@ -39,4 +35,39 @@ h1 {
 
 .header {
   font-size: 70px;
+}
+
+#joystick {
+  position: absolute;
+  bottom: 30%;
+  left: 30%;
+  width: 120px;
+  height: 120px;
+}
+
+.dir {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  touch-action: none;
+  text-align: center;
+}
+
+.dir.up {
+  top: 0;
+  left: 40px;
+}
+.dir.down {
+  bottom: 0;
+  left: 40px;
+}
+.dir.left {
+  top: 40px;
+  left: 0;
+}
+.dir.right {
+  top: 40px;
+  right: 0;
 }
