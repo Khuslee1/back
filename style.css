@@ -58,21 +58,21 @@ a {
 }
 
 .reaction {
-  background-image: url("/Users/25LP4542/newfo/back/reaction.png");
+  background-image: url("reaction.png");
 }
 
 .todo {
-  background-image: url("/Users/25LP4542/newfo/back/Todo.png");
+  background-image: url("Todo.png");
 }
 .Xo {
-  background-image: url("/Users/25LP4542/newfo/back/XO.png");
+  background-image: url("XO.png");
 }
 .Zuram {
-  background-image: url("/Users/25LP4542/newfo/back/zuram.png");
+  background-image: url("zuram.png");
 }
 
 .snake {
-  background-image: url("/Users/25LP4542/newfo/back/snake.png");
+  background-image: url("snake.png");
 }
 
 button {
