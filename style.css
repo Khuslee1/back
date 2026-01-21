@@ -2,136 +2,84 @@
   margin: 0;
   box-sizing: border-box;
 }
-/* body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  width: 100vw;
-  transform: rotate(180deg);
-}
-
-.cont {
-  position: relative;
-  display: flex;
-  height: 300px;
-  width: 500px;
-}
-
-.finger {
-  display: flex;
-  justify-content: center;
-  height: 100%;
-  width: 25%;
-  border: solid black 2px;
-  transition: height 0.5s;
-  align-items: flex-end;
-  background-color: blanchedalmond;
-  border-radius: 20px;
-}
-
-.erhii {
-  display: flex;
-  height: 200px;
-  width: 120px;
-  border: solid black 2px;
-  background-color: blanchedalmond;
-  border-radius: 20px;
-  justify-content: end;
-  align-items: end;
-}
-
-.hums {
-  height: 100px;
-  width: 100px;
-  border-radius: 30px;
-  border: solid black 2px;
-  opacity: 0;
-  background-color: palevioletred;
-}
-
-.humsi {
-  background-color: palevioletred;
-  height: 100px;
-  width: 50px;
-  border-radius: 0px 0px 20px 20px;
-  border: solid black 2px;
-  opacity: 1;
-}
-  */
-/* 
-.button {
-  border: solid black 2px;
-  height: 50px;
-  width: 100px;
-  background-color: white;
-  position: absolute;
-  bottom: 800px;
-} */
-/* body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  width: 100vw;
-}
-.cont {
-  height: 50px;
-  width: 100px;
-  display: flex;
-
-  border-radius: 10px;
-  border: solid black 2px;
-}
-
-.box {
-  display: flex;
-  height: 100%;
-  width: 50px;
-  justify-content: center;
-  align-items: center;
-} */
 
 .container {
-  height: 100vh;
   width: 100vw;
+  height: 100vh;
+  background-color: aqua;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url("https://thumbs.dreamstime.com/b/persian-carpet-texture-21684751.jpg");
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 50px;
-}
-
-.button {
-  height: 50px;
-  width: 150px;
-  background-color: yellow;
-  border-radius: 10px;
-  border: solid rgb(105, 105, 2) 3px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-/* 
-.buttcont {
-  display: flex;
   gap: 20px;
 }
 
-.button:hover {
-  background-color: brown;
-  color: white;
-  transition: 0.5s;
-}
-
-.pa {
-  height: 150px;
-  width: 300px;
-  border: dashed yellowgreen 3px;
-  border-radius: 20px;
+.header {
+  width: 60%;
+  height: 60%;
+  padding-top: 30px;
+  padding-bottom: 30px;
   display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
   justify-content: center;
   align-items: center;
-  background-color: yellow;
-  font-size: 20px;
-} */
+  border-radius: 12px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url("https://i.imgflip.com/7suivt.gif");
+}
+a {
+  display: inline-block;
+  width: 30%;
+  aspect-ratio: 3/2;
+}
+.box {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background-color: beige;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  transition: background-image 0.5s ease-out 0.5s;
+  cursor: pointer;
+}
+
+.box:hover {
+  filter: brightness(150%);
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUEzYFRikOCPE8V5sTV4qg9yF00_kXx8aqzw&s");
+}
+
+.reaction {
+  background-image: url("/Users/25LP4542/newfo/back/reaction.png");
+}
+
+.todo {
+  background-image: url("/Users/25LP4542/newfo/back/Todo.png");
+}
+.Xo {
+  background-image: url("/Users/25LP4542/newfo/back/XO.png");
+}
+.Zuram {
+  background-image: url("/Users/25LP4542/newfo/back/zuram.png");
+}
+
+.snake {
+  background-image: url("/Users/25LP4542/newfo/back/snake.png");
+}
+
+button {
+  background-color: white;
+  border-width: 2px;
+  border-color: red;
+  padding: 7px;
+  border-radius: 5px;
+  color: red;
+}
