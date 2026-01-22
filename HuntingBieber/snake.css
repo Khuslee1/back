@@ -11,6 +11,7 @@
 
 .box {
   height: 50%;
+  min-height: 400px;
   aspect-ratio: 1/1;
   position: relative;
   display: flex;
@@ -40,7 +41,7 @@ h1 {
 #joystick {
   position: absolute;
   bottom: 30%;
-  left: 30%;
+  left: 10px;
   width: 120px;
   height: 120px;
 }
@@ -70,4 +71,46 @@ h1 {
 .dir.right {
   top: 40px;
   right: 0;
+}
+
+@media screen and (max-width: 600px) {
+  .box {
+    height: 30%;
+    min-height: 200px;
+  }
+  .header {
+    font-size: 30px;
+  }
+
+  h1 {
+    font-size: 20px;
+    text: center;
+  }
+
+  #joystick {
+    width: 60px;
+    height: 60px;
+    bottom: 10px;
+    left: 50%;
+  }
+  .dir {
+    width: 20px;
+    height: 20px;
+  }
+  .dir.up {
+    top: 0;
+    left: 20px;
+  }
+  .dir.down {
+    bottom: 0;
+    left: 20px;
+  }
+  .dir.left {
+    top: 20px;
+    left: 0;
+  }
+  .dir.right {
+    top: 20px;
+    right: 0;
+  }
 }
