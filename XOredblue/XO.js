@@ -23,6 +23,7 @@ const winPos = [
 start.addEventListener("click", () => {
   let decide = true;
   start.disabled = true;
+  text.innerHTML = "Press the box!!!";
 
   box.forEach((ele, i) => {
     ele.addEventListener("click", () => {
@@ -37,9 +38,13 @@ start.addEventListener("click", () => {
       if (!gameOver) {
         if (decide) {
           ele.style.backgroundImage = `url("./red.png")`;
+          text.innerHTML = "White Turn!!";
+
           arr.splice(i, 1, 1);
         } else {
           ele.style.backgroundImage = `url("./blue.png")`;
+          text.innerHTML = "Black Turn!!";
+
           arr.splice(i, 1, -1);
         }
 
@@ -50,10 +55,14 @@ start.addEventListener("click", () => {
             return (blue = true);
         });
         if (red) {
-          text.innerHTML = "Black win!!!";
+          text.innerHTML = "Black Win!!!";
+          text.style.textShadow = "2px 2px red";
+
           gameOver = true;
         } else if (blue) {
-          text.innerHTML = "White win!!!";
+          text.innerHTML = "White Win!!!";
+          text.style.textShadow = "2px 2px blue";
+
           gameOver = true;
         } else if (arr.every((el) => el !== null)) {
           text.innerHTML = "Tie!!!";
@@ -75,4 +84,6 @@ res.addEventListener("click", () => {
   red = false;
   blue = false;
   gameOver = false;
+  text.innerHTML = "Press the box!!!";
+  text.style.textShadow = "";
 });

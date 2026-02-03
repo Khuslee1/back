@@ -1,3 +1,7 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
 .cont {
   height: 100vh;
   width: 100vw;
@@ -6,6 +10,10 @@
   justify-content: center;
   gap: 20px;
   flex-direction: column;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url("https://cdn.cnn.com/cnn/interactive/2018/04/us/martin-luther-king-jr-cnnphotos/media/01.jpg");
 }
 
 .boxes {
@@ -15,9 +23,14 @@
   flex-wrap: wrap;
 }
 .box {
-  height: 76px;
-  width: 76px;
+  height: 80px;
+  width: 80px;
   border: solid black 2px;
   background-image: none;
   background-size: cover;
+  background-color: white;
+}
+
+h1 {
+  color: white;
 }
