@@ -56,7 +56,7 @@ a {
 
 .box:hover {
   filter: brightness(150%);
-  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUEzYFRikOCPE8V5sTV4qg9yF00_kXx8aqzw&s");
+  background-image: url("https://i.guim.co.uk/img/media/bfde251cee69e233ae093f94778a3cbe311651a8/0_518_3600_2160/master/3600.jpg?width=465&dpr=1&s=none&crop=5%3A4");
 }
 
 .reaction {
@@ -80,14 +80,24 @@ a {
 button {
   background-color: white;
   border-width: 2px;
-  border-color: red;
+  border-color: yellow;
   padding: 7px;
   border-radius: 5px;
-  color: red;
+  color: black;
+  border-radius: 30px;
+}
+.Title {
+  font-size: 80px;
+  font-family: "Inter", sans-serif;
+  color: white;
+  text-shadow: 4px 4px gray;
 }
 
 @media screen and (max-width: 600px) {
   .header {
     height: fit-content;
+  }
+  .Title {
+    font-size: 30px;
   }
 }

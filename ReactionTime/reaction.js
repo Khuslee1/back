@@ -2,7 +2,7 @@ let butt = document.querySelector(".start");
 let container = document.querySelector(".container");
 
 const first = () => {
-  return `Wait for green`;
+  return `Wait for Erdenezaan`;
 };
 
 const second = () => {
