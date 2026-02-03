@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
 .cont {
   height: 100vh;
   width: 100vw;
@@ -44,6 +49,7 @@ h1 {
   left: 10px;
   width: 120px;
   height: 120px;
+  opacity: 0;
 }
 
 .dir {
@@ -53,7 +59,9 @@ h1 {
   background: rgba(0, 0, 0, 0.2);
   border-radius: 50%;
   touch-action: none;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .dir.up {
@@ -84,7 +92,7 @@ h1 {
 
   h1 {
     font-size: 20px;
-    text: center;
+    text-align: center;
   }
 
   #joystick {
@@ -92,6 +100,7 @@ h1 {
     height: 60px;
     bottom: 10px;
     left: 50%;
+    opacity: 100%;
   }
   .dir {
     width: 20px;

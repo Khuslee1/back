@@ -34,3 +34,16 @@
 h1 {
   color: white;
 }
+
+.start {
+  border-radius: 30px;
+  height: 30px;
+  width: 60px;
+  font-size: 20px;
+}
+.res {
+  border-radius: 30px;
+  height: 30px;
+  width: 80px;
+  font-size: 20px;
+}
